@@ -13,7 +13,7 @@ def main():
 
     jane_record = Record("Jane")
     jane_record.add_phone("9876543210")
-    book.add_cdrecord(jane_record)
+    book.add_record(jane_record)
 
     print(book)
 

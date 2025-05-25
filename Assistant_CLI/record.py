@@ -13,6 +13,11 @@ class Record:
         self.phones = [p for p in self.phones if p.value != phone]
 
     def edit_phone(self, phone, new_phone):
+        try:
+            Phone(new_phone)
+        except ValueError as e:
+            raise ValueError(f'Invalid new phone: {e}')
+        
         for p in self.phones:
             if p.value == phone:
                 p.value = new_phone
